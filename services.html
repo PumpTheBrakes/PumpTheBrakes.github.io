@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Services</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<link href="petstyle.css" rel="stylesheet">
+	<script>
+		function check(){
+			var input = document.getElementById('myEmailv');
+			if (input.value != document.getElementById('myEmail').value) {
+				input.setCustomValidity('The Emails must match.');
+			} else {
+				// input is valid -- reset the error message
+				input.setCustomValidity('');
+			}
+		}
+		function validateEmail(emailId)
+		{
+		var mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+		if(emailId.value.match(mailformat))
+		{
+		document.form1.text1.focus();
+		return true;
+		}
+		else
+		{
+		alert("Invalid email address.");
+		document.form1.text1.focus();
+		return false;
+		}
+		}
+		</script>
+</head>
+
+<body>
+
+	<header>
+		<div class="head">
+			<img src="Clogo.png" alt="COMPANY LOGO">
+		</div>
+		<div class="center">
+			<img src="Cbanner.png" alt=" COMPANY BANNER">
+		</div>
+		<div class="media">
+			<img src="followus.png" alt=" Social Media Link">
+		</div>
+
+
+		<h1><a href="index.html"> Paradigm Pet Professionals</a></h1>
+	</header>
+	<nav>
+		<ul >
+			<li><a href="index.html" class = "breadcrumbs__item">Home</a><li>
+			<li><a href="services.html"class = "breadcrumbs__item is-active">Services</a> <li>
+			<li><a href="dogs.html"class = "breadcrumbs__item">Dogs</a><li>
+			<li><a href="fish.html"class = "breadcrumbs__item">Fish</a><li>
+			<li><a href="cats.html"class = "breadcrumbs__item">Cats</a><li></li>
+		</ul>
+	</nav>
+	<main>
+		<h1>Services</h1>
+		<h2>Please fill out the following form for all your pet consultation needs<br> to be contacted by one of our "Pexperts".</h2>
+			<div id="flow">
+			   <p> Required fields are marked with an asterisk*</p>
+			   <form method="post" name="form1" action "#">
+				   <label for="FName">*Your Full Name:</label>
+					   <input type="text" name="FName" id="FName" required>
+				   <label for="PName">*Pets Name:</label>
+					   <input type="text" name="PName" id="PName" required>
+					<label for="PAge">*Pets Age:</label>
+					   <input type="number" name="PAge" id="PAge" required>
+					<label for="PType">*Pet Type:</label>
+					   <input type="text" name="PType" id="PType" required>
+					<label for="Phone">*Contact Number:</label>
+					   <input type="tel" name="Phone" id="Phone" required>
+				   <label for="myEmail">*E-mail:</label>
+					   <input type="text" name="myEmail" id="myEmail" required>
+				   <label for="myEmailv">*Confirm E-mail:</label>
+					   <input type="text" name="myEmailv" id="myEmailv" oninput="check()" required>
+					<label for="Time">*Please Enter your local time:</label>
+					   <input type="datetime-local" name="Time" id="Time" required>
+				   <label for="myComments">Ask a question or leave a comment:</label>
+					   <textarea name="myComments" id="myComments" rows="2" cols="20" ></textarea>
+				   <input type="submit" value="Submit" id="mysubmit" onclick="validateEmail(document.form1.myEmail)">
+			   </form>
+			</section>
+			<section>
+				<img src= "consult.jpg" alt ="A picture of a pexpert">
+			</section>
+		</div>
+
+	</main>
+
+
+	</main>
+	</main>
+</body>
+<footer>
+	Paradigm Pet Professionals has 12 years’ experience working with pet owners, certifications in pet health and
+	nutrition, and customer recognition for outstanding support <br>
+	<a href="mailto:kwh1228@wgu.edu">kwh1228@wgu.edu</a>
+</footer>
+</div>
+</body>
+
+</html>
