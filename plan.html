@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Plan a Visit</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<link href="city.css" rel="stylesheet">
+<script>
+function check(){
+	var input = document.getElementById('myEmailv');
+    if (input.value != document.getElementById('myEmail').value) {
+        input.setCustomValidity('The Emails must match.');
+    } else {
+        // input is valid -- reset the error message
+        input.setCustomValidity('');
+    }
+}
+function validateEmail(emailId)
+{
+var mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+if(emailId.value.match(mailformat))
+{
+document.form1.text1.focus();
+return true;
+}
+else
+{
+alert("Invalid email address.");
+document.form1.text1.focus();
+return false;
+}
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="head">
+
+  </div>
+<h1>Plan a visit</h1>
+</header>
+
+<nav>
+	<ul>
+		<li><a href="index.html">Home</a><li>
+		<li><a href="lansing.html">Lansing State Capital</a> <li>
+		<li><a href="grayling.html">Grayling</a><li>
+		<li><a href="marquette.html">Marquette</a><li>
+		<li><a href="plan.html">Plan Your Visit</a><li></li>
+	</ul>
+</nav>
+	<div id="wrap">
+</div>
+<main>	
+ <h1>Contact us for a visitors guide to help plan you visit.</h1>
+ <div id="flow">
+	<p> Required fields are marked with an asterisk*</p>
+	<form method="post" name="form1" action "#">
+		<label for="FName">*First Name:</label>
+			<input type="text" name="FName" id="FName" required>
+		<label for="LName">*Last Name:</label>
+			<input type="text" name="LName" id="LName" required>
+		<label for="myEmail">*E-mail:</label>
+			<input type="text" name="myEmail" id="myEmail" required>
+		<label for="myEmailv">*Confirm E-mail:</label>
+			<input type="text" name="myEmailv" id="myEmailv" oninput="check()" required>
+		<label for="myComments">Ask a question or leave a comment:</label>
+			<textarea name="myComments" id="myComments" rows="2" cols="20" ></textarea>
+		<input type="submit" value="Submit" id="mysubmit" onclick="validateEmail(document.form1.myEmail)">
+	</form>
+	<aside>
+		<p>Feel free to leave a comment for the staff<br> to help improve our cutomer experience</p>
+	</aside>
+ </div>
+ <section>
+ 	<h2>Table of Population data of the Citys.</h2>
+ 		<table>
+			<tr>
+				<th>City Name</th>
+				<th>Population</th>
+				<th>Median Income</th>			
+			</tr>
+			<tr>
+				<td>Lansing</td>
+				<td>114,297</td>
+				<td>$77,745</td>	
+			</tr>
+			<tr>
+				<td>Grayling</td>
+				<td>1,758</td>
+				<td>$30,417</td>	
+			</tr>
+			<tr>
+				<td>Marquette</td>
+				<td>20,609</td>
+				<td>$50,257</td>	
+			</tr>
+		</table>
+	</section>
+ </main>
+
+</body>
+<footer>
+  State of Michigan<br>
+  <a href="mailto:kwh1228@wgu.edu">kwh1228@wgu.edu</a>
+</footer>
+</div>
+</body>
+</html>
