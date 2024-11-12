@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Lodging</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<link href="petstyle.css" rel="stylesheet">
+	<script>
+		function check(){
+			var input = document.getElementById('myEmailv');
+			if (input.value != document.getElementById('myEmail').value) {
+				input.setCustomValidity('The Emails must match.');
+			} else {
+				// input is valid -- reset the error message
+				input.setCustomValidity('');
+			}
+		}
+		function validateEmail(emailId)
+		{
+		var mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+		if(emailId.value.match(mailformat))
+		{
+		document.form1.text1.focus();
+		return true;
+		}
+		else
+		{
+		alert("Invalid email address.");
+		document.form1.text1.focus();
+		return false;
+		}
+		}
+		</script>
+</head>
+
+<body>
+
+	<header>
+		<div class="head">
+			<img src="pool.jpg" alt="Picture of a pool">
+		</div>
+		<div class="center">
+			<img src="hotel.jpg" alt="Picture of a Hotel">
+		</div>
+		<div class="media">
+			<img src="followus.png" alt=" Social Media Link">
+		</div>
+
+
+		<h1><a href="index.html">The Island of Taniti</a></h1>
+	</header>
+	<nav>
+		<ul >
+			<li><a href="index.html" class = "breadcrumbs__item">Home</a><li>
+			<li><a href="lodging.html"class = "breadcrumbs__item is-active">Lodging</a> <li>
+			<li><a href="restaurants.html"class = "breadcrumbs__item">Restaurants</a><li>
+			<li><a href="fish.html"class = "breadcrumbs__item">Fish</a><li>
+			<li><a href="cats.html"class = "breadcrumbs__item">Cats</a><li></li>
+		</ul>
+	</nav>
+	<main>	
+		<h1>Taniti Hotels and Lodging</h1>
+		<div id="flow">
+		   <section>
+			   <img src= "hotel2.jpg" alt ="picture of a Hotel">
+		   </section>
+		   <section>
+			   <p>Taniti has a wide variety of lodging that ranges from an inexpensive hostel to one large, four-star resort. There are many small, family-owned hotels and a growing number of bed and breakfasts. All types of lodging are strictly regulated and regularly inspected by the Tanitian government.</p>
+		   </section>
+		   <section>
+			   <img src = "hotel3.jpg" alt= "Picture of a hotel">
+		   </section>
+	   </div>
+	    
+	</main>
+	   
+</body>
+<footer>
+	Paradigm Pet Professionals has 12 years’ experience working with pet owners, certifications in pet health and
+	nutrition, and customer recognition for outstanding support <br>
+	<a href="mailto:kwh1228@wgu.edu">kwh1228@wgu.edu</a>
+</footer>
+</div>
+</body>
+
+</html>
