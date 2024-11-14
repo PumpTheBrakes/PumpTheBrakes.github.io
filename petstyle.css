@@ -151,7 +151,7 @@ background: #edf1f5;
 .breadcrumbs__item:before {
 background: white;
 bottom: 0;
-    clip-path: polygon(50% 50%, -50% -50%, 0 100%);
+  
 content: "";
 left: 100%;
 position: absolute;
