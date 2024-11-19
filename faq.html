@@ -4,16 +4,42 @@
 <title>Home</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
-<link href="petstyle.css" rel="stylesheet">
+<link href="islandstyle.css" rel="stylesheet">
+<script>
+	function check(){
+		var input = document.getElementById('myEmailv');
+		if (input.value != document.getElementById('myEmail').value) {
+			input.setCustomValidity('The Emails must match.');
+		} else {
+			// input is valid -- reset the error message
+			input.setCustomValidity('');
+		}
+	}
+	function validateEmail(emailId)
+	{
+	var mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+	if(emailId.value.match(mailformat))
+	{
+	document.form1.text1.focus();
+	return true;
+	}
+	else
+	{
+	alert("Invalid email address.");
+	document.form1.text1.focus();
+	return false;
+	}
+	}
+	</script>
 </head>
 <body>
 
 <header>
   <div class="head">
-    <img src= "Clogo.png" alt ="COMPANY LOGO">
+    <img src= "island_main.jpg" alt ="Picture of an Island">
   </div>
   <div class="center">
-	<img src="Cbanner.png" alt=" COMPANY BANNER" >
+	<img src="beach_center.jpg" alt="picture of a beach" >
   </div>
   <div class="media">
 	<img src="followus.png" alt=" Social Media Link" >
@@ -36,48 +62,56 @@
 	<div id="wrap">
 </div>
 <main>	
- <h1>Cats</h1>
+ <h1>FREQUENTLY ASKED QUESTIONS</h1>
  <div id="flow">
+
 	<section>
-		<img src= "cat1.jpg" alt ="picture of a cat">
+		<h2><p> •	Power outlets are 120 volts (the same as in the United States). <br>
+				•	Alcohol is not allowed to be served or sold between the hours of midnight and 9:00 a.m. <br>
+				•	The drinking age on Taniti is 18 and the drinking age is not strictly enforced.<br>
+				•	Alcohol is not allowed to be served or sold between the hours of midnight and 9:00 a.m.<br>
+				•	Many younger Tanitians speak fluent English. Very little English is spoken in rural areas, especially by the older residents.<br>
+				•	There is one hospital and several clinics. The hospital has many multilingual employees.<br>
+				•	Violent crime is very rare on Taniti, but as tourism increases, there are more reports of pickpocketing and other petty crimes. <br>
+				•	Taniti enjoys a large number of national holidays, and many tourist attractions and restaurants will be closed on holidays, so visitors should plan accordingly.<br>
+				•	Taniti uses the U.S. dollar as its currency, but many businesses will also accept euros and yen. Several banks facilitate currency exchange, and many businesses accept major credit cards.<br></p></h2>
 	</section>
 	<section>
-		
-		<p>Cats were first domesticated around 7500 BCE in the western Asia region and are currently the second most popular domestic pet in the United States.<br>
-             While there are over 60 unique documented cat breeds, care and diet can differ between breeds.<br>
-             However, some diets and practices are generally recommended for the well-being of your fluffy family member regardless of breed. </p>
-	</section>
-	<section>
-		<img src = "cat2.jpg" alt= "Picture of Cat on the stairs">
+		<img src = "island2.jpg" alt= "Picture of the island">
 	</section>
 </div>
 <div id="flow">
-	<section>
-	<h2>Zero to Four Weeks</h2>
-<p>It is important the queen (a term commonly used for a female cat that is either pregnant or nursing) directly nurse her young if possible. Monitor your kitten’s growth closely to make sure its growth rate is progressing steadily. If any kitten is not growing at a sufficient rate, a caretaker might need to feed the kitten directly either with a bottle or a feeding tube. Some reasons why kittens might not gain weight appropriately include the following:<br>
-    •	too many other siblings are competing for mom's milk<br>
-    •	gastrointestinal disease<br>
-    •	environmental conditions such as extreme heat or cold, or unsanitary conditions
-    </p>
- 	</section>
-	<section>
-		<h2>Four Weeks to One Year</h2>
-		<p>Kittens can start being introduced to soft wet kitten food typically around three to four weeks after birth. According to the ASPCA, kittens at this age should eat half to one cup of dry kitten food or six to nine ounces of wet kitten food per day. If your kitten has difficulties eating hard food, a small amount of water can be added to soften the food. Cat food that is optimized for kittens provides the additional nutrients that are needed for growth, energy, and wellness. Depending on the breed, your cat may have different dietary requirements. You should always consult with your veterinarian for recommendations.</p>
-	</section>
-	<section>
-		<h2>One Year to Seven Years</h2>
-		<p>This age is when kittens reach the cat stage and do not need as many nutrients. At this age, their level of activity decreases, and so does their metabolism. It is not recommended to leave food out for the cats all day. Instead, provide food a couple times a day so they eat meals rather than snacking throughout the day. This practice reduces the risk of obesity and other weight-related feline ailments.</p>
-	</section>
-    <section>
-        <h2>Seven Years and More</h2>
-        <p>Much like many living organisms, the body begins to deteriorate and experience a lot of changes. Cats at this age should eat less fats and calories and more quality proteins. This means when you are purchasing packaged foods for your cat, look for food that states a particular protein (such as "salmon") and not just a category (such as fish). This usually means they are byproducts, or combinations, of lesser quality proteins.</p>
-    </section>
+	<main>
+				<h2>Please fill out the following form with your question and an island expert will respond ASAP.</h2>
+			<div id="flow">
+			   <p> Required fields are marked with an asterisk*</p>
+			   <form method="post" name="form1" action "#">
+				   <label for="FName">*Your Full Name:</label>
+					   <input type="text" name="FName" id="FName" required>
+				   <label for="PName">*How you plan to travel:</label>
+					   <input type="text" name="PName" id="PName" required>
+					<label for="PAge">*Your age:</label>
+					   <input type="number" name="PAge" id="PAge" required>
+					<label for="PType">*Where you plan to stay:</label>
+					   <input type="text" name="PType" id="PType" required>
+					<label for="Phone">*Contact Number:</label>
+					   <input type="tel" name="Phone" id="Phone" required>
+				   <label for="myEmail">*E-mail:</label>
+					   <input type="text" name="myEmail" id="myEmail" required>
+				   <label for="myEmailv">*Confirm E-mail:</label>
+					   <input type="text" name="myEmailv" id="myEmailv" oninput="check()" required>
+					<label for="Time">*Please Enter your local time:</label>
+					   <input type="datetime-local" name="Time" id="Time" required>
+				   <label for="myComments">Ask a question or leave a comment:</label>
+					   <textarea name="myComments" id="myComments" rows="2" cols="20" ></textarea>
+				   <input type="submit" value="Submit" id="mysubmit" onclick="validateEmail(document.form1.myEmail)">
+			   </form>
+			</section>
+		</div>
+
+	</main>
 </div>
 
- </main>
-
-
- </main>
 </main>
 </body>
 <footer>
